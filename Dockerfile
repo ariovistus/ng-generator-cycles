@@ -10,7 +10,8 @@ ADD dist/ng-generator-cycles /usr/share/nginx/html/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Expose ports
-EXPOSE 80
+ARG PORT
+EXPOSE PORT
 
 # Set the default command to execute
 # when creating a new container
